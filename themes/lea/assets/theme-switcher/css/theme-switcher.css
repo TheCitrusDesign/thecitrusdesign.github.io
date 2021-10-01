@@ -1,0 +1,164 @@
+/**
+ * Template: Theme Switcher
+ * Author: TheCitrusDesign
+ * Version: 1.0
+ * Design by: TheCitrusDesign
+*/
+
+#ts_panel {
+	position: fixed;
+	top: 150px;
+	font-family: 'Open Sans', sans-serif;
+	opacity: 0;
+	z-index: 9999;
+}
+
+#ts_panel ul, #ts_panel ol {
+	padding: 0;
+}
+
+#ts_panel h1,#ts_panel h2,#ts_panel h3, #ts_panel h5,#ts_panel h6 {
+	color: #25cbd3;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	text-transform: none;
+	font-size: 14px;
+	margin-bottom: 7px;
+	letter-spacing: -1px;
+}
+
+#ts_menu {
+	float: left;
+	width: 254px;
+	color: #444;
+	background: #181818;
+	box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, .3);
+}
+
+#ts_menu .segment {
+	padding: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	border-bottom: 1px solid #3e5300;
+}
+
+#ts_menu h4 {
+	font-size: 18px;
+	padding: 11px 0;
+	background: #333333;
+	color: #25cbd3;
+	line-height: 1;
+}
+
+#ts_menu .segment.noborder {
+	border: none;
+}
+
+#ts_menu ul.theme {
+	margin: 4px 0px 0px 0px;
+	list-style: none;
+}
+
+#ts_menu ul.theme li {
+	float: left;
+}
+
+#ts_menu ul.theme li a {
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin: 0px 5px 5px 0px;
+	line-height: 0px;
+	border: 1px solid #222;
+	border-radius: 50%;
+	/* box-shadow: 0px 1px 2px #111; */
+}
+
+#ts_menu ul.theme li a:hover {
+	border: 1px solid #25cbd3;
+}
+
+#ts_menu label {
+	display: inline-block;
+	font-weight: bold;
+	min-width: 50px;
+}
+
+#ts_panel select {
+	margin: 5px 0;
+	display: inline-block;
+	color: #555;
+	background-color: #f9f9f9;
+}
+
+#toggle_button {
+	float: left;
+	padding-top: 4px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background-color: #333;
+	-moz-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, .3);
+	
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+#toggle_button a {
+	display: block;
+	padding: 14px 0px;
+}
+
+.fa.fa-cog {
+	color: #25cbd3;
+}
+
+.reset, .panel_btn {
+	display: inline-block;
+	margin: 10px 10px 10px 0;
+	padding: 7px 10px;
+	background: #414141;
+	color: #fff !important;
+	font-size: 15px;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-webkit-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	border-radius: 2px;	
+}
+
+.reset:hover, 
+.reset:focus,
+.panel_btn:hover, 
+.panel_btn:focus {
+	background: #333333;
+	color: #fff !important;
+	transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-webkit-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	
+}
+
+.panel_btn {
+	padding:10px 7px;
+	font-size:10px;
+	color:#fffff;
+}
