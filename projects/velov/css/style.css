@@ -1,0 +1,858 @@
+/* ----------------------------------------------------------------------------------------
+*                                       SOMMAIRE
+*
+*	01. CSS GLOBAL 												--> Ligne 47
+*	02. SITE LOADER									  			--> Ligne 251
+*	03. HEADER													--> Ligne 323
+*	04. SECTION SLIDESHOW										--> Ligne 398
+*	05. SECTION GOOGLE MAP										--> Ligne 645
+*	06. SECTION INFORMATIONS STATIONS							--> Ligne 660
+*	07. SECTION RESERVATION STATIONS							--> Ligne 741
+*	08. FOOTER													--> Ligne 781
+*
+* -------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------
+*                                       STYLE POLICE
+* -------------------------------------------------------------------------------------- */
+/* Font-weight: 300 */
+@font-face {
+    font-family: "Lato-Light";
+    src: url('../fonts/lato/Lato-Light.ttf');
+}
+
+/* Font-weight: 400 */
+@font-face {
+    font-family: "Lato-Regular";
+    src: url('../fonts/lato/Lato-Regular.ttf');
+}
+
+/* Font-weight: 700 */
+@font-face {
+    font-family: "Lato-Bold";
+    src: url('../fonts/lato/Lato-Bold.ttf');
+}
+
+/* Font-weight: 900 */
+@font-face {
+    font-family: "Lato-Black";
+    src: url('../fonts/lato/Lato-Black.ttf');
+}
+
+/* ----------------------------------------------------------------------------------------
+*                                       01. CSS GLOBAL
+* -------------------------------------------------------------------------------------- */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+    font-weight: 900;
+	text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+
+p {
+	font-family: "Lato-Light";
+	font-weight: 300;
+}
+
+ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+ul li {
+    font-size: 1em;
+    font-family: 'Lato-Bold', sans-serif;
+	display: inline;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+	left: 0;
+	right: 0;
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* Couleurs du thème */
+.dark-blue-primary-color    { background: #0288D1; }
+.default-blue-primary-color { background: #03A9F4; }
+.light-blue-primary-color   { background: #B3E5FC; }
+.text-primary-color    		{ color: #FFFFFF; }
+.accent-lime-color          { background: #CDDC39; }
+.access-text-color			{ color: #CDDC39; }
+.no-access-color			{ background: #ff0d00; }
+.no-access-text-color		{ color: #ff0d00; }
+.primary-text-color    		{ color: #212121; }
+.secondary-text-color  		{ color: #757575; }
+.text-alert-color			{ color: #ff0d00; }
+.divider-color         		{ border: 1px solid #BDBDBD; }
+
+/* Style boutons par défaut */
+.default-btn {
+	padding: 10px 10px;
+	margin: 10px;
+	background-color: #CDDC39;
+	text-transform: uppercase;
+	
+	border-radius: 5px;
+	
+	box-shadow: 0 2px 5px 0 #505050;
+	-moz-box-shadow: 0 2px 5px 0 #505050;
+	-webkit-box-shadow: 0 2px 5px 0 #505050;
+	-o-box-shadow: 0 2px 5px 0 #505050;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#505050, Direction=180, Strength=10);
+}
+
+.default-btn:hover {
+	background-color: #03A9F4;
+	color: #212121;
+	
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.default-btn:active {
+	background-color: #03A9F4;
+	color: #212121;
+}
+
+/* Style bouton close modal aide + infos stations + réservation*/
+.modal-close-btn, .station-infos-close-btn {
+	position: relative;
+	top: -20px;
+	right: 0;
+    float: right;
+	width: 35px;
+	height: 35px;
+	max-width: 35px;
+	border-radius: 50%;
+	
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+		
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+		
+	box-shadow: 0px 0px 6px 0px #505050;
+	-moz-box-shadow: 0px 0px 6px 0px #505050;
+	-webkit-box-shadow: 0px 0px 6px 0px #505050;
+	-o-box-shadow: 0px 0px 6px 0px #505050;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#505050, Direction=180, Strength=10);
+	
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	-ms-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.modal-close-btn:hover, .station-infos-close-btn:hover {
+	cursor: pointer;
+	color: #272727;
+	
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+/* Style des inputs */
+input[type="text"] {
+	width: 100%;
+	line-height: 29px;
+	padding: 2px 10px;
+	font-family: "Lato-Regular", sans-serif;
+	font-size: 1em;
+	
+	border: none;
+	border-top: 3px solid #BDBDBD;
+	border-bottom: 3px solid #BDBDBD;
+}
+
+input[type="text"]::placeholder {
+	color: #BDBDBD;
+}
+
+input[type="text"]:focus {
+	outline: none;
+	border: none;
+	border-top: 3px solid #CDDC39;
+	border-bottom: 3px solid #CDDC39;
+	background-color: #fefefe;
+}
+
+input[type="button"] {
+	width: 100%;
+	line-height: 30px;
+	padding: 2px 10px;
+	font-family: "Lato-Bold", sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #fff;
+	
+	border: none;
+}
+
+input[type="button"]:hover {
+    cursor: pointer;
+	background-color: #03A9F4;
+	color: #212121;
+	
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                                       02. SITE LOADER
+* -------------------------------------------------------------------------------------- */
+#loader{
+    position: fixed;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #212121; /*rgba(0,0,0,1);*/
+	
+	font-family: "Lato-Regular", sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+		
+	text-align: center;
+	padding: 0;
+}
+
+.loading {
+	position: relative;
+	width: 150px;
+    height: 150px;
+	margin: 0 auto;
+    
+	border: 16px solid #03A9F4; 	/* Light blue */
+    border-top: 16px solid #CDDC39; /* lime */
+	border-bottom: 16px solid transparent;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+		
+    animation: spinner 1.5s linear infinite;
+}
+
+.loading-1 {
+	position: relative;
+	top: -235px;
+	width: 250px;
+    height: 250px;
+	margin: 0 auto;
+    
+	border: 16px solid #CDDC39; 	/* Light blue */
+    border-top: 16px solid #03A9F4; /* lime */
+	border-bottom: 16px solid transparent;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+		
+    animation: spinner-inv 1.5s linear infinite;
+}
+
+#loader .material-icons {
+	position: relative;
+	top: 150px;
+	font-size: 3.5em;
+	margin: auto;
+}
+
+/* Animation des spinners */
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spinner-inv {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*                                       03. HEADER
+* -------------------------------------------------------------------------------------- */
+.header-site {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	color: #fff;
+	background-color: rgba(2,136,209,0.8);
+	z-index: 100;
+	
+	box-shadow: 0px 1px 6px 0px #505050;
+	-moz-box-shadow: 0px 1px 6px 0px #505050;
+	-webkit-box-shadow: 0px 1px 6px 0px #505050;
+	-o-box-shadow: 0px 1px 6px 0px #505050;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#505050, Direction=180, Strength=10);
+}
+
+#logo {
+	float: left;
+	height: 80px;
+	max-height: 80px;
+	padding-top: 5px;
+}
+
+#logo h1 {
+	font-family: 'Lato-Black', sans-serif;
+	font-size: 3em;
+	line-height: 10%;
+	letter-spacing: 0.1em;
+}
+
+#navigation {
+	float: left;
+	height: 80px;
+	max-height: 80px;
+	padding: 30px 0 0 50px;
+}
+
+#station-infos-search {
+	position: relative;
+	top: 20px;
+	left: 35px;
+	float:right;
+	width: 350px;
+}
+
+.station-infos-search-icon {
+	position: absolute;
+	top: 0;
+	right: -35px;
+	float: right;
+	width: 39px;
+	height: 39px;
+	max-width: 39px;
+	
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*								04. SECTION SLIDESHOW
+* -------------------------------------------------------------------------------------- */ 
+#slideshow {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	overflow: hidden;
+}
+
+/* Modifier le width selon le nb de slides (ici 3 slides, soit 300%) */
+.slider {
+	position: relative;
+	width: 300%;
+	
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#slide-1 { background-image: url("../img/slideshow/slide-1.jpg"); background-size: cover; width:100vw; height:100vh; }
+#slide-2 { background-image: url("../img/slideshow/slide-2.jpg"); background-size: cover; width:100vw; height:100vh; }
+#slide-3 { background-image: url("../img/slideshow/slide-3.jpg"); background-size: cover; width:100vw; height:100vh; }
+
+.slider figure {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: inline-flex;
+	background-position: center;
+}
+
+/* Styles des légendes */
+.slider figcaption {
+	position: absolute;
+	left: 1em;
+	top: 10em;
+	width: 60%;
+	height: auto;
+	padding: 1em;
+	text-align: left;
+	font-family: "Lato-Regular", sans-serif;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.slider-figcaption-title {
+	font-size: 1.5em;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.slider-figcaption-info {
+	padding-bottom: 20px;
+	font-size: 1em;
+	color: #fff;
+}
+
+#slideshow-navigation {
+	position: relative;
+	width: 100%;
+	bottom: 0;
+}
+
+/* Boutons Navigation et Lecture */
+#pause {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+}
+
+.slideshow-nav {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 10px;
+    color: #fff;
+	text-align: center;
+}
+
+a.thumb, a.controls {
+	width: 4em;
+	height: 4em;
+	color: #fff;
+	margin: 10px;
+	background: #0288D1;
+	border-radius: 50%;
+	
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: inline-flex;
+	
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+		
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+		
+	box-shadow: 0px 0px 6px 0px #505050;
+	-moz-box-shadow: 0px 0px 6px 0px #505050;
+	-webkit-box-shadow: 0px 0px 6px 0px #505050;
+	-o-box-shadow: 0px 0px 6px 0px #505050;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#505050, Direction=180, Strength=10);
+}
+
+a.thumb:hover {
+	background-color: #CDDC39;
+	color: #272727;
+	
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+a.controls:hover {
+	background-color: #ff0d00;
+	color: #272727;
+	
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.active-controls {
+	width: 4em;
+	height: 4em;
+	color: #272727;
+	margin: 10px;
+	background: #ff0d00;
+	border-radius: 50%;
+	
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: inline-flex;
+	
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+		
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+		
+	box-shadow: 0px 0px 6px 0px #505050;
+	-moz-box-shadow: 0px 0px 6px 0px #505050;
+	-webkit-box-shadow: 0px 0px 6px 0px #505050;
+	-o-box-shadow: 0px 0px 6px 0px #505050;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#505050, Direction=180, Strength=10);
+}
+
+.slideshow-nav a.active {
+	background-color: #CDDC39;
+	color: #272727;
+}
+
+/* ProgressBar en bas du slideshow */
+.progressBar {
+	position: relative;
+	bottom: 5px;
+	left: 0;
+	width: 0%;
+	height: 5px;
+	background-color: #CDDC39;
+	opacity: 1;
+	z-index: 1;
+}
+
+/*------------------------------------------------------
+		GESTION DES FLECHES DE NAVIGATION
+------------------------------------------------------*/
+/* On cache les inputs */
+#slideshow input[type=radio] {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	z-index: 999;
+	visibility: hidden;
+}
+
+/* Construction des flèches de navigation */
+label[for=button-1], label[for=button-2] {
+	position: absolute;
+	top: 50%;
+	width: 30px;
+	height: 80px;
+	display: none;
+	z-index: 100;
+	
+	/* Image de la flèche */
+	background-image: url('../img/slideshow/chevron.png');
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+	background-color: #000;
+	background-position: 20% 50%;
+	opacity: 0.4;
+	
+	border-radius: 10px 0 0 10px;
+	-webkit-border-radius: 10px 0 0 10px;
+	-moz-border-radius: 10px 0 0 10px;
+}
+
+label[for=button-1]:hover, label[for=button-2]:hover {
+	opacity: 0.8;
+	cursor: pointer;
+	
+	/* Animation sur le hover */
+	transition: 0.3s ease-in-out;
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+}
+
+/* Placement des flèches de navigation */
+label[for=button-1] {
+	left: 0;
+	display: block;
+
+	/* Inversion de la flèche de navigation */
+	transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+}
+
+label[for=button-2] {
+  right: 0;
+  display: block;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*								05. SECTION GOOGLE MAP
+* ---------------------------------------------------------------------------------------*/
+#map {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+}
+
+.icon-label {
+	color: #272727;
+}
+
+
+/*-----------------------------------------------------------------------------------------
+*								06. SECTION INFORMATIONS STATION
+*----------------------------------------------------------------------------------------*/
+#gmap {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #fefefe;
+	overflow: hidden;
+	padding-top: 250px;
+}
+
+
+#station-infos {
+	position: absolute;
+	right: 0;
+	bottom: 15em;
+	float: right;
+	width: 25%;
+	display: none;
+}
+
+/* Contenu Station Infos */
+.station-infos-content {
+	width: 100%;
+	
+	box-shadow: 0px 1px 6px 0px #505050;
+	-moz-box-shadow: 0px 1px 6px 0px #505050;
+	-webkit-box-shadow: 0px 1px 6px 0px #505050;
+	-o-box-shadow: 0px 1px 6px 0px #505050;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#505050, Direction=180, Strength=10);
+}
+
+/* Header Station Infos */
+.station-infos-header {
+    padding: 2px 16px;
+	font-family: 'Lato-Bold', sans-serif;
+	font-size: 1em;
+	text-align: left;
+	text-transform: uppercase;
+    color: #fff;
+}
+
+/* Body Station + Booking Infos */
+.station-infos-body, .booking-infos-body {
+	height: 40vh;
+	padding: 2px 16px;
+    font-family: 'Lato-Regular', sans-serif;
+	font-size: 1em;
+    background-color: #fefefe;
+	
+	border-top: 1px solid #BDBDBD;
+	border-bottom: 1px solid #BDBDBD;
+}
+
+.station-infos-body-title, .booking-infos-body {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#status-station, #bike-stands-station,
+#available-bike-stands-station, #available-bikes-station {
+	position: relative;
+	top: 0;
+	width: 100%;
+	font-size: 1em;
+    font-family: 'Lato-Regular', sans-serif;
+	letter-spacing: 0.1em;
+	line-height: 10px;
+	text-align: center;
+	
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*								07. SECTION RESERVATION
+* -------------------------------------------------------------------------------------- */
+.booking-infos-body {
+	display: none;
+	overflow: hidden;
+}
+
+.booking-canvas-sign {
+	overflow: hidden;
+}
+
+.booking-infos-name {
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	margin : 0 auto;
+	width: 80%;
+	height: 25px;
+	
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.booking-infos-alert {
+	padding: 10px;
+    font-family: 'Lato-Light', sans-serif;
+	font-size: 1em;
+	text-align: center;
+	display: none;
+}
+
+
+/* ----------------------------------------------------------------------------------------
+*										08. FOOTER
+* -------------------------------------------------------------------------------------- */
+.footer-site {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+    font-size: 1em;
+    font-family: 'Lato-Light', sans-serif;
+	z-index: 0;
+		
+	box-shadow: 0px 0px 6px 0px #505050;
+	-moz-box-shadow: 0px 0px 6px 0px #505050;
+	-webkit-box-shadow: 0px 0px 6px 0px #505050;
+	-o-box-shadow: 0px 0px 6px 0px #505050;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#505050, Direction=180, Strength=10);
+}
+
+.footer-site-frame {
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 5px;
+	width: 50%;
+	height: 50px;
+	margin: auto;
+	background-color: #fefefe;
+}
+
+.col-1 {
+	text-align: center;
+	padding: 5px;
+}
+
+/* Style bouton close/reset réservation*/
+.booking-reset-btn {
+	position: relative;
+	top: 2px;
+	right: -25px;
+    float: right;
+	width: 45px;
+	height: 45px;
+	max-width: 45px;
+	color: #fff;
+	border: 7px solid #0288D1;
+	padding: 6px 0 0 10px;
+	
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+		
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+			
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	-ms-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.booking-reset-btn:hover {
+	cursor: pointer;
+	color: #272727;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vélo'v est un site web de réservation en ligne de vélos sur Lyon">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+	
+	<!-- Meta Open Graph -->
+	<meta property="og:title" content="Vélo'v" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://alexandre-jacquin.fr/projet-3/" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content="Vélo'v est un site web de réservation en ligne de vélos sur Lyon" />
+	
+	<!-- Meta Twitter Card -->
+	<meta name="twitter:card" content="summary">
+    
+	<!-- Titre Site -->
+    <title>Vélo'v</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/favicon.ico">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+	
+    <!-- Site CSS RESPONSIVE -->
+    <link rel="stylesheet" href="./css/mediaquery.css">
+	
+	<!-- MATERIAL ICON -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		
+</head>
+
+<body>
+
+	<!-- SITE LOADER -->
+	<div id="loader">
+		<h2 class="text-primary-color">vélo'v</h2>
+		<h3 class="text-primary-color">chargement en cours</h3>
+		<i class="text-primary-color material-icons">directions_bike</i>
+		<div class="loading"></div>
+		<div class="loading-1"></div>
+	</div>
+	
+	
+	<!-- HEADER -->
+	<header class="header-site">
+		<div class="container">
+			<div id="logo"><h1>vélo'v</h1></div>
+			
+			<div id="navigation">
+				<nav>
+					<ul>
+						<li><a id="modal-help-btn" class="default-btn text-primary-color" href="#map">carte</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="station-infos-search">
+				<input id="modal-search" type="text" placeholder="Rechercher l'emplacement d'une station">
+				<span class="station-infos-search-icon accent-lime-color"><i class="text-primary-color material-icons">location_searching</i></span>
+			</div>
+		</div>
+	</header>
+
+	
+	<!-- SECTION SLIDESHOW -->
+	<section id="slideshow">
+	
+		<!-- Boutons Suivant et Précédent -->
+		<input id="button-1" type="radio" name="controls" checked="" />
+		<input id="button-2" type="radio" name="controls" />
+
+		<label for="button-1"></label>
+		<label for="button-2"></label>
+
+		<!-- GESTION CONTENU SLIDESHOW -->
+		<div class="slider">
+						
+			<!-- Slide 1 -->
+			<figure id="slide-1" class="slide">
+				<figcaption>
+					<h2 class="slider-figcaption-title">bienvenue sur le site de réservation vélo'v</h2>
+					<p class="slider-figcaption-info">
+						Grâce à notre service de réservation en ligne, vous pouvez à tout moment consulter la carte et réserver un Vélo'v.<br />
+						Pour ce faire, rien de plus simple ! Cliquez sur le bouton "CARTE" dans le menu en haut de votre écran.
+					</p>
+				</figcaption>							
+			</figure>
+						
+			<!-- Slide 2 -->
+			<figure id="slide-2" class="slide">
+				<figcaption>
+					<h2 class="slider-figcaption-title">rechercher</h2>
+					<p class="slider-figcaption-info">
+						Vous pouvez zoomer sur la carte afin de voir toutes les stations disponibles ou utiliser la barre de recherche pour trouver votre station.<br />
+						Sélectionner votre station puis réserver votre choix.
+					</p>
+				</figcaption>							
+			</figure>
+
+			<!-- Slide 3 -->
+			<figure id="slide-3" class="slide">
+				<figcaption>
+					<h2 class="slider-figcaption-title">confirmer</h2>
+					<p class="slider-figcaption-info">
+						Signer dans la cadre prévu à cet effet puis valider en confirmant votre choix.<br />
+						Le statut de votre réservation est situé en bas de votre écran.<br />
+						Si vous souhaitez annulé votre réservation, il vous suffit de cliquer sur la croix rouge.
+					</p>
+				</figcaption>							
+			</figure>
+												
+		</div>
+		<!-- FIN GESTION CONTENU SLIDESHOW -->
+		
+		
+		<div id="slideshow-navigation">
+			<!-- Slider Navigation -->
+			<nav class="slideshow-nav">
+				<a href="#slide-1" class="thumb" data-index="1"><i class="material-icons">home</i></a> 
+				<a href="#slide-2" class="thumb" data-index="2"><i class="material-icons">place</i></a> 
+				<a href="#slide-3" class="thumb" data-index="3"><i class="material-icons">directions_bike</i></a>
+			</nav>
+		
+			<!-- Bouton pause slideshow -->
+			<a href="#" id="pause" class="controls"></a>
+		</div>
+		
+		<div class="progressBar"></div>
+		
+	</section>
+	<!-- FIN SECTION SLIDESHOW -->
+	
+		
+	<!-- CONSULTATION DES STATIONS -->
+	<section id="gmap">
+	
+		<!-- GOOGLE MAP -->
+		<div id="map"></div>
+
+		<div class="container">
+			<!-- Utiliser pour le mode mobile -->
+			<div id="overlay"></div>
+				
+			<div id="station-infos" class="station-infos-content">
+					
+				<!-- Header -->
+				<div class="station-infos-header default-blue-primary-color">
+					<div class="station-infos-close-btn accent-lime-color"><i class="fa fa-times"></i></div>
+					<h4>station <span id="name-station" class="primary-text-color"></span></h4>
+				</div>
+						
+				<!-- Contenu Station-->
+				<div class="station-infos-body">
+						
+					<h4 class="station-infos-body-title primary-text-color">statut</h4>
+					<div id="status-station"></div>
+					
+					<h4 class="station-infos-body-title primary-text-color">total des places</h4>
+					<div id="bike-stands-station" class="secondary-text-color"></div>
+					
+					<h4 class="station-infos-body-title primary-text-color">places disponibles</h4>
+					<div id="available-bike-stands-station" class="secondary-text-color"></div>
+					
+					<h4 class="station-infos-body-title primary-text-color">vélo'v disponibles</h4>
+					<div id="available-bikes-station"></div>
+					
+				</div>
+					
+				<!-- Contenu Réservation -->
+				<div class="booking-infos-body">
+											
+					<h4 class="booking-infos-body-title primary-text-color">signature</h4>
+					<div class="booking-canvas-sign divider-color">
+						<canvas id="sign-in"></canvas>
+						<textarea id="sign-dataUrl" style="display:none;"></textarea>
+					</div>
+						
+					<input id="clearCanvas" type="button" value="Effacer">
+					<div id="modal-alert" class="booking-infos-alert text-alert-color">Un champ n'est pas rempli correctement.</div>
+						
+				</div>
+						
+				<!-- Footer -->
+				<input id="booking-btn" type="button" value="réserver" />
+				<input id="booking-btn-confirm" type="button" value="confirmer" />
+					
+			</div><!-- Fin station infos -->
+		</div><!-- Fin container -->
+	</section>
+	<!-- FIN CONSULTATION DES STATIONS -->
+	
+	
+	<!-- FOOTER -->
+	<footer class="footer-site dark-blue-primary-color">
+		<div class="container">
+			<div class="footer-site-frame .primary-text-color">
+				<div id="booking-btn-reset" class="booking-reset-btn no-access-color"><i class="fa fa-times"></i></div>
+				<div id="footer-count-down" class="col-1"></div>
+			</div>
+		</div>
+	</footer>
+	
+	
+	<!-- SCRIPTS JAVASCRIPT -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places&key=AIzaSyDpK2P9q3B2CO-pQrOIqFicM26Bwjus2Bc"></script>
+	
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/loader.js"></script>
+	<script src="./js/markerwithlabel.js"></script>
+	<script src="./js/ajac-markers.js"></script>
+	<script src="./js/file.conf.js"></script>
+	<script src="./js/markerclusterer.js"></script>
+	<script src="./js/modal.js"></script>
+	<script src="./js/gmap.js"></script>
+	<script src="./js/booking.js"></script>
+	
+</body>
+</html>

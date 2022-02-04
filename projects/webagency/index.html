@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WebAgency - Agence de communication, marketing">
+    <meta name="keywords" content="création site internet, entreprises, particuliers, marketing, réseaux sociaux, référencement">
+    <meta name="author" content="WebAgency">
+	
+	<!-- Meta Open Graph -->
+	<meta property="og:title" content="WebAgency" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://alex.jacquin.perso.free.fr/" />
+	<meta property="og:image" content="img/logo.png" />
+	<meta property="og:description" content="WebAgency - Agence de communication, marketing" />
+	
+	<!-- Meta Twitter Card -->
+	<meta name="twitter:card" content="summary">
+    
+	<!-- Titre Site -->
+    <title>WebAgency</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/favicon.ico">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+	
+    <!-- Site CSS RESPONSIVE -->
+    <link rel="stylesheet" href="./css/mediaquery.css">
+	
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	
+    <!-- Slideshow CSS Home site version -->
+    <link rel="stylesheet" href="./slideshow/css/slideshow.css">
+	
+    <!-- Home mobile version CSS -->
+    <link rel="stylesheet" href="./css/home-mobile.css">
+	
+    <!-- Portfolio CSS -->
+    <link rel="stylesheet" href="./portfolio/css/portfolio.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="accueil">
+  
+	<!-- HEADER + NAV STANDARD -->
+	<header class="header-site">
+		<div class="container">
+			<div id="logo">
+				<img src="img/logo.png" alt="WebAgency">
+			</div>
+		
+			<div id="navigation">
+				<nav>
+					<ul>
+						<li><a href="#accueil">Accueil</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<!-- HEADER + NAV MOBILE -->
+	<header class="header-mobile">
+			
+			<div id="logo-mobile">
+				<img src="img/logo.png" alt="WebAgency">
+			</div>
+			
+			<nav>
+				<div id="menuToggle">
+					<!-- Menu hamburger -->
+					<input type="checkbox" role="button" />
+					<span></span>
+					<span></span>
+					<span></span>
+			
+					<!-- Liens vers sections -->
+					<ul id="menu">
+						<li class="space"><a href="#accueil">Accueil</a></li>
+						<li class="space"><a href="#services">Services</a></li>
+						<li class="space"><a href="#portfolio">Portfolio</a></li>
+						<li class="space"><a href="#contact">Contact</a></li>
+					</ul>
+				</div>	
+			</nav>
+			
+	</header>
+	
+	
+	<!-- SECTION SLIDESHOW HOME SITE VERSION -->
+	<section id="slideshow">
+
+		<!-- Boutons Next et Previous -->
+		<input id="button-1" type="radio" name="controls" checked="" />
+		<input id="button-2" type="radio" name="controls" />
+
+		<label for="button-1"></label>
+		<label for="button-2"></label>
+		
+		
+		<!-- Sliders -->
+		<div class="slider">
+			
+			<!-- Slide 1 -->
+			<figure>
+				<img src="img/slideshow/bg1.jpg" alt="petite fille avec des mains de différentes couleurs">
+				<figcaption>
+					<h1 class="slider-figcaption-title"><span class="slider-figcaption-title-color">webagency</span> : l'agence de tous vos projets !</h1>
+					<p class="slider-figcaption-info">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+					<a class="slider-figcaption-button" href="#services">Nos services</a>
+				</figcaption>							
+			</figure>
+					
+			<!-- Slide 2 -->
+			<figure>
+				<img src="img/slideshow/bg2.jpg" alt="petit garçon qui crit dans un mégaphone">
+				<figcaption>
+					<h1 class="slider-figcaption-title"><strong class="slider-figcaption-title-color">webagency</strong> : votre agence de communication web</h1>
+					<p class="slider-figcaption-info">Profitez d'un outil marketing puissant : le web !</p>
+					<a class="slider-figcaption-button" href="#contact">Nous contacter</a>
+				</figcaption>						
+			</figure>
+			
+			<!-- Slide 3 (Slide 1 pour palier au problème du left -33.33% sur slide 2)-->
+			<figure>
+				<img src="img/slideshow/bg1.jpg" alt="petite fille avec des mains de différentes couleurs">
+				<figcaption>
+					<h1 class="slider-figcaption-title"><span class="slider-figcaption-title-color">webagency</span> : l'agence de tous vos projets !</h1>
+					<p class="slider-figcaption-info">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+					<a class="slider-figcaption-button" href="#services">Nos services</a>
+				</figcaption>							
+			</figure>
+						
+		</div><!-- Fin div slider -->
+			
+		
+		<!-- Timeline -->
+		<div id="timeline"></div>
+
+	</section>
+	
+	
+	<!-- SECTION HOME MOBILE VERSION -->
+	<section id="home-mobile">
+
+		<!-- Container -->
+		<div class="home-mobile-container">
+			
+			<h1 class="hm-title"><span class="hm-title-color">webagency</span><br />votre agence de communication</h1>
+			
+			<div class="line-separator-mobile"></div>
+			<div class="dot-separator-mobile"></div>
+			
+			<!-- Box left -->
+			<figure>
+				<figcaption>
+					<p class="hm-figcaption-info">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+					<a class="hm-figcaption-button" href="#services">Nos services</a>
+				</figcaption>							
+			</figure>
+					
+			<!-- Box right -->
+			<figure>
+				<figcaption>
+					<p class="hm-figcaption-info">Profitez d'un outil marketing puissant qu'est le web !</p>
+					<a class="hm-figcaption-button" href="#contact">Nous contacter</a>
+				</figcaption>						
+			</figure>
+			
+		</div><!-- Fin div home mobile container -->
+
+	</section>
+
+	
+	<!-- SECTION SERVICES -->
+	<section id="services">
+		
+		<div class="container">
+
+			<!-- Contenu header -->
+			<div class="summary">
+				<h1 class="summary-title">nos services</h1>
+				<div class="line-separator"></div>
+				<div class="dot-separator"></div>
+				<p class="summary-infos">Votre entreprise est importante à vos yeux ? Votre site internet l'est tout autant et constitut un <strong>outil de marketing puissant</strong> vous permettant d'<strong>attirer</strong> encore plus de <strong>clients potentiels</strong>.</p>
+			</div>
+				
+			<!-- Text Content -->
+			<div class="services-box-left">
+				<img class="main-services-picture" src="img/services/main-services.png" alt="image PC mac">
+			</div>
+				
+			<div class="services-box-right">
+						
+				<!-- UX Design -->
+				<div class="services-all">
+						
+					<div class="services-icon">
+						<i class="fa fa-line-chart fa-2x"></i>
+						<div class="icon-dot"></div>
+					</div>
+							
+					<div class="services-info">
+						<h3 class="services-info-title">ux design</h3>
+						<p class="services-info-text">Pour <strong>User Experience Design</strong>. Il prend en compte vos attentes et besoins pour réaliser votre projet et ainsi le rendre <strong>accessible</strong>, facile de prise en main et <strong>efficace</strong>.</p>
+					</div>
+					
+				</div>
+					
+				<!-- UI Design -->
+				<div class="services-all">
+					
+					<div class="services-icon">
+						<i class="fa fa-cubes fa-2x"></i>
+						<div class="icon-dot"></div>
+					</div>
+						
+					<div class="services-info">
+						<h3 class="services-info-title">ui design</h3>
+						<p class="services-info-text">Pour <strong>User Interface Design</strong>. Il consiste à concevoir une <strong>interface agréable</strong> entre l'utilisateur et votre projet.</p>
+					</div>
+					
+				</div>
+					
+				<!-- SEO -->
+				<div class="services-all">
+						
+					<div class="services-icon">
+						<i class="fa fa-pie-chart fa-2x"></i>
+						<div class="icon-dot"></div>
+					</div>
+						
+					<div class="services-info">
+						<h3 class="services-info-title">seo</h3>
+						<p class="services-info-text">Pour <strong>Search Engine Optimization</strong>. Cet art du réferencement naturel permet à votre site internet d'être <strong>référencé</strong> et ainsi <strong>apparaître</strong> dans les <strong>premières pages des moteurs de recherche</strong>.</p>
+					</div>
+					
+				</div>
+				
+			</div><!-- Fin div box right -->
+			
+		</div><!-- Fin div container -->
+		
+	</section>
+
+	<!-- SECTION PORTFOLIO -->
+	<section id="portfolio">
+		
+		<div class="container">
+			
+			<!-- Contenu du header -->
+			<div class="summary">
+				<h1 class="summary-title">nos projets</h1>
+				<div class="line-separator"></div>
+				<div class="dot-separator"></div>
+				<p class="summary-infos">Nous sommes fiers de vous présenter quelques unes de nos réalisations !<br />Création de <strong>site internet, stratégie digitale et communication</strong>.</p>
+			</div>
+
+			<!-- Boutons pour les filtres -->
+			<input id="btn-select-all" name="selector" type="radio" class="select-all" checked="checked" />
+			<label for="btn-select-all" class="label-all">Tous</label>
+				
+			<input id="btn-select-creations" name="selector" type="radio" class="select-creations" />
+			<label for="btn-select-creations" class="label-creations">Créations</label>
+				
+			<input id="btn-select-website" name="selector" type="radio" class="select-website" />
+			<label for="btn-select-website" class="label-website">Sites Web</label>
+				
+			<input id="btn-select-logos" name="selector" type="radio" class="select-logos" />
+			<label for="btn-select-logos" class="label-logos">Logos</label>
+
+			<!-- Flèche des boutons -->
+			<div id="caret">
+				<i class="fa fa-caret-down fa-2x"></i>
+			</div>
+			
+					
+			<!-- Mise en place des images -->	
+			<ul class="grid-items">
+				<li class="active website">
+					<img src="img/portfolio/01.jpg" alt="Image lunettes noires opticien">
+					<div class="overlay">
+						<h3>optic.fr</h3>
+						<span>Site de vente en ligne de lunettes.</span>
+						<a href="img/portfolio/01.jpg">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+				</li>
+					
+				<li class="active website">
+					<img src="img/portfolio/02.jpg" alt="Image déguisement lapin bleu">
+					<div class="overlay">
+						<h3>tous-en-fete.fr</h3>
+						<span>Site de vente en ligne de déguisements.</span>
+						<a href="img/portfolio/02.jpg">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+				</li>
+					
+				<li class="active logos">
+					<img src="img/portfolio/03.jpg" alt="Image logo marque de jean">
+					<div class="overlay">
+						<h3>Pompadour.com</h3>
+						<span>Réalisation d'un logo pour une marque de jean.</span>
+						<a href="img/portfolio/03.jpg">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+				</li>
+					
+				<li class="active creations">
+					<img src="img/portfolio/04.jpg" alt="Image graphique type abstrait sur fond jaune">
+					<div class="overlay">
+						<h3>NeoTech.com</h3>
+						<span>Charte graphique pour un techno-campus.</span>
+						<a href="img/portfolio/04.jpg">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+				</li>
+					
+				<li class="active website">
+					<img src="img/portfolio/05.jpg" alt="Image sac en papier alimentaire">
+					<div class="overlay">
+						<h3>mon-marche.fr</h3>
+						<span>Site web en agro-alimentaire.</span>
+						<a href="img/portfolio/05.jpg">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+				</li>
+					
+				<li class="active creations">
+					<img src="img/portfolio/06.jpg" alt="Image du monde avec illustration de bâtiments">
+					<div class="overlay">
+						<h3>voyageons.com</h3>
+						<span>Maquette réalisée pour une agence de voyage</span>
+						<a href="img/portfolio/06.jpg">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+				</li>
+					
+				<li class="active logos">
+					<img src="img/portfolio/07.jpg" alt="Image fusée qui décolle vers les étoiles">
+					<div class="overlay">
+						<h3>nos-etoiles.fr</h3>
+						<span>Site internet pour passionnés d'astronomie.</span>
+						<a href="img/portfolio/07.jpg">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+				</li>
+					
+				<li class="active creations">
+					<img src="img/portfolio/08.jpg" alt="Image de différentes fournitures de bureau et papeterie">
+					<div class="overlay">
+						<h3>mon-bureau.net</h3>
+						<span>Charte graphique pour une enseigne de papeterie.</span>
+						<a href="img/portfolio/08.jpg">
+							<i class="fa fa-eye"></i>
+						</a>
+					</div>
+				</li>
+			</ul><!-- Fin grid items -->
+			
+		</div><!-- Fin div container -->
+		
+	</section>
+
+	<!-- SECTION CONTACT -->
+	<section id="contact">
+		
+		<div class="google-map">
+			<iframe src="https://maps.google.com/maps?hl=fr&amp;q=25%20rue%20d'Hauteville%2075010%20Paris+(WebAgency%20SAS)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe>
+		</div>
+		
+		<div class="container">
+		
+			<div id="contact-form">
+				<div class="contact-form-header">
+					<h2>Nous contacter</h2>
+					<h4 class="medium">WebAgency SAS<br /><span class="light">25 rue d'Hauteville 75010 Paris<br />Tél : 01 02 03 04 05</span></h4>
+				</div>
+				
+				<div class="contact-form-content">
+					<form action="formulaire.php" method="POST">
+						<input type="text" name="Nom" placeholder="Nom" required />
+						<input type="email" name="email" placeholder="Email" required />
+						<input type="text" name="Sujet" placeholder="Sujet" required />
+						<textarea placeholder="Votre message..." required></textarea>
+						<input type="submit" name="envoi" value="envoyer" class="btn-send" />
+					</form>
+				</div>
+				
+			</div><!-- Fin div contact form -->
+
+		</div><!-- Fin div container -->
+						
+	</section>
+	
+	</body>
+  
+</html>

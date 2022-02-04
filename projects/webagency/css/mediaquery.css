@@ -1,0 +1,158 @@
+/* FORMAT GRAND ECRAN */
+@media (min-width: 1389px)
+{
+
+	/* HEADER et NAVIGATION */
+	header.header-site {
+		display: block;
+	}
+	header.header-mobile, #home-mobile  {
+		display: none;
+	}
+
+}/* FIN MEDIA QUERY */
+
+
+/* FORMAT TABLETTE */
+@media (min-width: 1025px) and (max-width: 1388px)
+{
+
+	/* GENERAL */
+	.container {
+		width: 95%;
+		margin: auto;
+		overflow:hidden;
+	}
+	
+	.summary {
+		padding-bottom: 30px;
+	}
+	
+	.summary-title {
+		line-height: 2em;
+		font-size: 2em;
+	}
+	
+	.summary-infos {
+		width: 95%;
+		padding: 0;
+	}
+	
+	/* HEADER et NAVIGATION */
+	header.header-site {
+		display: block;
+	}
+	header.header-mobile, #home-mobile  {
+		display: none;
+	}	
+
+}/* FIN MEDIA QUERY */
+
+
+/* FORMAT SMARTPHONE */
+@media (min-width: 320px) and (max-width: 1024px)
+{
+
+	/* GENERAL */
+	.container {
+		width: 95%;
+		margin: auto;
+		overflow:hidden;
+	}
+	
+	.summary {
+		padding-bottom: 30px;
+	}
+	
+	.summary-title {
+		line-height: 2em;
+		font-size: 2em;
+	}
+	
+	.summary-infos {
+		width: 95%;
+		padding: 0;
+	}
+
+
+	/* HEADER et NAVIGATION */
+	header.header-site {
+		display: none;
+	}
+	header.header-mobile, #home-mobile  {
+		display: block;
+	}
+	
+	
+	/* SLIDESHOW */
+	#slideshow {
+		display: none;
+	}	
+	
+	
+	/* SERVICES */
+	#services .services-box-left {
+		display: none;
+	}
+	
+	#services .services-box-right {
+		width: 100%;
+	
+	}
+	
+	.services-all {
+		padding-bottom: 40px;
+		
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		flex-flow: row wrap;
+	
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+	
+	.services-info-title {
+		text-align: center;
+	}
+	
+	.services-info-text {
+		text-align: center;
+	}
+
+	
+	/* PORTFOLIO
+	--> Voir fichier portfolio.css L.220*/
+
+	
+	/* CONTACT */
+	#contact {
+		position: relative;
+		width: 90%;
+		height: 250px;
+		margin: 0 auto;
+		background-color: #5cadd3;
+	
+		-moz-box-shadow: 0px 0px 10px 0px #7c7c7c;
+		-webkit-box-shadow: 0px 0px 10px 0px #7c7c7c;
+		-o-box-shadow: 0px 0px 10px 0px #7c7c7c;
+		box-shadow: 0px 0px 10px 0px #7c7c7c;
+		filter: progid:DXImageTransform.Microsoft.Shadow(color=#7c7c7c, Direction=NaN, Strength=10);
+	}
+	
+	.google-map{
+		position: absolute;
+		width: 100%;
+		height: 250px;
+		opacity: 0.6;
+	}
+	
+	#contact-form {
+		top: 270px;
+		width: 100%;
+		height: 850px;
+		background-color: rgba(255, 255, 255, 1);
+	}
+
+}/* FIN MEDIA QUERY */
