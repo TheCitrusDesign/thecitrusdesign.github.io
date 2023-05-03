@@ -1,14 +1,14 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/404": "pages/404.html",
+  "/_error": "pages/_error.js",
   "/api/search": "pages/api/search.js",
   "/home": "pages/home.html",
-  "/authors": "pages/authors.js",
   "/": "pages/index.js",
+  "/authors": "pages/authors.js",
   "/authors/[slug]": "pages/authors/[slug].js",
   "/blog/[slug]": "pages/blog/[slug].js",
   "/tag": "pages/tag.js",
-  "/tag/[tag]": "pages/tag/[tag].js",
-  "/404": "pages/404.html"
+  "/tag/[tag]": "pages/tag/[tag].js"
 }
